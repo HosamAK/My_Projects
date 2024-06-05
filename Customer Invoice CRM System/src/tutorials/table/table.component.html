@@ -1,0 +1,21 @@
+<div class="page-header">{{ title }}</div>
+<table>
+  <thead>
+  <tr>
+    @for (col of displayColumns; track col) {
+      <th>{{ col }}</th>
+    }
+  </tr>
+  </thead>
+  <tbody>
+    @for (entry of data; track entry) {
+      <tr>
+        @for (col of columns; track col) {
+          <td>{{ entry[col] }}</td>
+        }
+      </tr>
+    } @empty {
+      <b>Empty data</b>
+    }
+  </tbody>
+</table>

@@ -1,0 +1,22 @@
+.page-header {
+    width: 100%; /* Adjust width and height as needed */
+    height: 100px;
+    border: 5px solid red;
+    border-radius: 1%; /* Create a perfect circle */
+    margin: 0 auto; /* Center the circle horizontally */
+    display: flex; /* Make the div a flex container */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+}
+
+
+/* Apply basic table styles */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 8px;
+    border: 4px solid red;
+}

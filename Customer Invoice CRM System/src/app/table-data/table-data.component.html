@@ -1,0 +1,31 @@
+
+<table style="margin: 0 auto;"> 
+    <thead > 
+        <tr>
+            @for (header of table_headers; track header){
+                <th>{{ header }}</th>
+            }
+            @empty{
+                <b style="color: red;"> there is no table_headers </b>
+            }
+        </tr>
+    </thead>
+    <tbody>
+        @for (user_table of table_data; track user_table) {
+        <tr (click)="UploadData(user_table)">
+            @for (user_key of proporites; track user_key){
+            <td>{{user_table[user_key]}} </td>
+            }
+            @empty{
+                <b> Empty table </b>
+            }
+        </tr>
+        }
+        
+        @empty{
+            <b> Empty table </b>
+        }
+    
+
+    </tbody>
+</table>
